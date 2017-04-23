@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Request;
 use App\Driver;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -16,5 +16,15 @@ class DriverController extends Controller
         $drivers = Driver::all();
 
         return view();
+    }
+
+    public function create() {
+        return view('form-driver');
+    }
+
+    public function store() {
+        $input = Request::all();
+        Driver::create($input);
+        return redirect('home');
     }
 }

@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return redirect('test');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/addDriver', 'DriverController@create');
+Route::post('/saveDriver', 'DriverController@store');
+
