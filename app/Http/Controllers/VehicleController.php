@@ -1,28 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\User;
+use App\Vehicle;
 use Request;
-use App\Driver;
 
-class DriverController extends Controller
+class VehicleController extends Controller
 {
 
     public function show()
     {
-        $drivers = Driver::all();
-
+        $vehicle = Vehicle::all();
         return view();
     }
 
     public function create() {
-        return view('form-driver');
+        return view('form-vehicle');
     }
 
     public function store() {
         $input = Request::all();
-        Driver::create($input);
-        User::create($input);
+        Vehicle::create($input);
         return redirect('home');
     }
 }

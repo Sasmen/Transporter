@@ -19,9 +19,9 @@ class CreateOrdersTable extends Migration
             $table->decimal('price',8,2);
             $table->date('date_start');
             $table->date('date_end');
-            $table->integer('driver_id');
+            $table->integer('driver_id')->unsigned();
             $table->foreign('driver_id')->references('id')->on('drivers')->onDelete('cascade');
-            $table->integer('vehicle_id');
+            $table->integer('vehicle_id')->unsigned();
             $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
             $table->timestamps();
         });

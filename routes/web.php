@@ -22,3 +22,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/addDriver', 'DriverController@create');
 Route::post('/saveDriver', 'DriverController@store');
 
+Route::get('/addVehicle', 'VehicleController@create');
+Route::post('/saveVehicle', 'VehicleController@store');
+

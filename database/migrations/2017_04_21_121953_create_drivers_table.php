@@ -19,6 +19,8 @@ class CreateDriversTable extends Migration
             $table->string('surname');
             $table->string('phone',10);
             $table->date('commencement');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
