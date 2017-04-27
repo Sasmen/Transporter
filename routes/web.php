@@ -11,17 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
+Route::get('/', 'HomeController@index');
 
-Route::get('/home', 'HomeController@index');
 
-Route::get('/addDriver', 'DriverController@create');
-Route::post('/saveDriver', 'DriverController@store');
+Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 
-Route::get('/addVehicle', 'VehicleController@create');
-Route::post('/saveVehicle', 'VehicleController@store');
+    Route::get('/addDriver', 'DriverController@create')->name('addDriver');
+    Route::post('/saveDriver', 'DriverController@store');
 
+    Route::get('/addVehicle', 'VehicleController@create')->name('addVehicle');
+    Route::post('/saveVehicle', 'VehicleController@store');
+
+});

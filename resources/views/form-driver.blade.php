@@ -71,7 +71,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="form-group">
                                     <div class="col-md-4 control-label">
                                         {!! Form::label('email', 'Mail:') !!}

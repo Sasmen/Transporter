@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class Driver extends Model
 {
@@ -10,7 +11,8 @@ class Driver extends Model
         'name',
         'surname',
         'phone',
-        'commencement'
+        'commencement',
+        'user_id'
     ];
 
     public function order() {

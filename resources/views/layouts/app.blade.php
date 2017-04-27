@@ -15,9 +15,7 @@
 
     <!-- Scripts -->
     <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
+        window.Laravel = {!! json_encode(['csrfToken' => csrf_token(),]) !!};
     </script>
 </head>
 <body>
@@ -42,8 +40,11 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
+                    <ul class="nav navbar-nav">&nbsp;
+                        @if (Auth::user() && Auth::user()->hasRole('admin'))
+                            <li><a href="{{ route('addDriver') }}">Dodaj kierowcę</a></li>
+                            <li><a href="{{ route('addVehicle') }}">Dodaj pojazd</a></li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
