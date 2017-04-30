@@ -8,12 +8,13 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 class Driver extends Model
 {
     protected $fillable = [
-        'name',
+        'forename',
         'surname',
         'phone',
         'commencement',
         'user_id'
     ];
+
 
     public function order() {
         return $this->hasMany('App\Order');

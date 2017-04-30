@@ -32,14 +32,15 @@ class DriverController extends Controller
             'phone' => 'required|digits:9',
             'commencement' => 'required|date',
             'name' => 'required|string|max:255',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6',
             'email' => 'required|string|email|max:255|unique:users'
         ]);
 
         $input = Req::all();
         $input['password'] = bcrypt($input['password']);
+        $user = User::create($input);
+        $input['user_id'] = $user->id;
         Driver::create($input);
-        User::create($input);
         return redirect('admin/addDriver');
     }
 }

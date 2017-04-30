@@ -125,7 +125,9 @@ return [
         'capacity' => 'pojemność',
         'payload' => 'ładowność',
         'registration' => 'numer rejestracyjny',
-        'combustion' => 'spalanie'
+        'combustion' => 'spalanie',
+        'price' => 'cena',
+        'date_start' => 'data rozpoczęcia'
     ],
 
 ];

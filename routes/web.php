@@ -23,4 +23,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::get('/addVehicle', 'VehicleController@create')->name('addVehicle');
     Route::post('/saveVehicle', 'VehicleController@store');
 
+    Route::get('/addOrder', 'OrderController@create')->name('addOrder');
+    Route::post('/saveOrder', 'OrderController@store');
+
 });
