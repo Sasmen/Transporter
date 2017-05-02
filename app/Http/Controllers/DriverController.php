@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use Illuminate\Support\Facades\DB;
 use Request as Req;
 use Illuminate\Http\Request;
 use App\Driver;
@@ -15,9 +16,15 @@ class DriverController extends Controller
 
     public function show()
     {
-        $drivers = Driver::all();
+        $drivers = DB::table('drivers')->paginate(2);
+        if (count($drivers) === 0  && $drivers->currentPage() > 1) {
+            $lastPage = $drivers->lastPage(); // Get last page with results.
+            $url = route('listDriver').'?page='.$lastPage; // Manually build URL.
+            return redirect($url);
+        }
 
-        return view();
+        //$drivers = Driver::all()->paginate(2);
+        return view('list-driver', ['drivers' => $drivers]);
     }
 
     public function create() {
@@ -41,6 +48,14 @@ class DriverController extends Controller
         $user = User::create($input);
         $input['user_id'] = $user->id;
         Driver::create($input);
+        \Session::flash('flash_message', 'Dodano nowego kierowce ;)');
         return redirect('admin/addDriver');
+    }
+    public function destroy($id) {
+
+        $driver = Driver::findOrFail($id);
+        $driver->delete();
+        \Session::flash('flash_message', 'udało się wyciepać kierowcę;)');
+        return back();
     }
 }

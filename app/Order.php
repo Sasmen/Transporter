@@ -9,7 +9,9 @@ class Order extends Model
     protected $fillable = [
         'name',
         'price',
-        'date_end'
+        'date_start',
+        'date_end',
+        'driver_id'
     ];
 
     public function driver() {

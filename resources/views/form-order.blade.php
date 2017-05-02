@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
                     <div class="panel-heading">Dodawanie zleceń</div>
                     <div class="panel-body">
                         <div class="form-horizontal">
@@ -29,7 +25,9 @@
                                         {!! Form::label('price', 'Cena:') !!}
                                     </div>
                                     <div class="col-md-6">
+                                        <div class="input-group">
                                         {!! Form::text('price', null, ['class' => 'form-control']) !!}
+                                        <span class="input-group-addon">zł</span></div>
                                         @if ($errors->has('price'))
                                             <span class="help-block"><strong>{{ $errors->first('price') }}</strong></span>
                                         @endif
@@ -50,12 +48,12 @@
 
                                 <div class="form-group {{ $errors->has('driver') ? ' has-error' : '' }}">
                                     <div class="col-md-4 control-label">
-                                        {!! Form::label('driver', 'Kierowca:') !!}
+                                        {!! Form::label('driver_id', 'Kierowca:') !!}
                                     </div>
                                     <div class="col-md-6">
-                                        {!! Form::select('driver', $drivers, null, ['class' => 'form-control selectpicker']) !!}
-                                        @if ($errors->has('driver'))
-                                            <span class="help-block"><strong>{{ $errors->first('driver') }}</strong></span>
+                                        {!! Form::select('driver_id', $drivers, null, ['class' => 'form-control selectpicker']) !!}
+                                        @if ($errors->has('driver_id'))
+                                            <span class="help-block"><strong>{{ $errors->first('driver_id') }}</strong></span>
                                         @endif
                                     </div>
                                 </div>
@@ -71,8 +69,4 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
