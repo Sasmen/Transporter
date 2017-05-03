@@ -51,6 +51,14 @@
                         <li><a href="{{ route('addOrder') }}">Dodaj zlecenie</a></li>
                         <li><a href="{{ route('listDriver') }}">Kierowcy</a></li>
                         <li><a href="{{ route('listVehicle') }}">Pojazdy</a></li>
+                        <li><a href="{{ route('listOrder') }}">Zlecenia</a></li>
+                    @endif
+                </ul>
+
+
+                <ul class="nav navbar-nav">&nbsp;
+                    @if (Auth::user() && Auth::user()->hasRole('driver'))
+                        <li><a href="{{ route('listOrder') }}">Zlecenia</a></li>
                     @endif
                 </ul>
 
@@ -98,6 +106,13 @@
                         {!! session('flash_message') !!}
                     </div>
                 @endif
+
+                    @if(Session::has('flash_error'))
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {!! session('flash_error') !!}
+                        </div>
+                    @endif
                 <div class="panel panel-default">
                     @yield('content')
                 </div>

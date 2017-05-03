@@ -24,33 +24,33 @@ return [
     |
     | Here you may define all of the cache "stores" for your application as
     | well as their drivers. You may even define multiple stores for the
-    | same cache driver to group types of items stored in your caches.
+    | same cache Driver to group types of items stored in your caches.
     |
     */
 
     'stores' => [
 
         'apc' => [
-            'driver' => 'apc',
+            'Driver' => 'apc',
         ],
 
         'array' => [
-            'driver' => 'array',
+            'Driver' => 'array',
         ],
 
         'database' => [
-            'driver' => 'database',
+            'Driver' => 'database',
             'table' => 'cache',
             'connection' => null,
         ],
 
         'file' => [
-            'driver' => 'file',
+            'Driver' => 'file',
             'path' => storage_path('framework/cache/data'),
         ],
 
         'memcached' => [
-            'driver' => 'memcached',
+            'Driver' => 'memcached',
             'persistent_id' => env('MEMCACHED_PERSISTENT_ID'),
             'sasl' => [
                 env('MEMCACHED_USERNAME'),
@@ -69,7 +69,7 @@ return [
         ],
 
         'redis' => [
-            'driver' => 'redis',
+            'Driver' => 'redis',
             'connection' => 'default',
         ],
 

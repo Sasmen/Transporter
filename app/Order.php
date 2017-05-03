@@ -11,7 +11,11 @@ class Order extends Model
         'price',
         'date_start',
         'date_end',
-        'driver_id'
+        'driver_id',
+        'vehicle_id',
+        'capacity',
+        'payload',
+        'combustion'
     ];
 
     public function driver() {

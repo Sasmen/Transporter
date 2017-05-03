@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'Driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     | Sendmail System Path
     |--------------------------------------------------------------------------
     |
-    | When using the "sendmail" driver to send e-mails, we will need to know
+    | When using the "sendmail" Driver to send e-mails, we will need to know
     | the path to where Sendmail lives on this server. A default path has
     | been provided here, which will work well on most of your systems.
     |

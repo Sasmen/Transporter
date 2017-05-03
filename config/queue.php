@@ -9,7 +9,7 @@ return [
     |
     | Laravel's queue API supports an assortment of back-ends via a single
     | API, giving you convenient access to each back-end using the same
-    | syntax for each one. Here you may set the default queue driver.
+    | syntax for each one. Here you may set the default queue Driver.
     |
     | Supported: "sync", "database", "beanstalkd", "sqs", "redis", "null"
     |
@@ -31,25 +31,25 @@ return [
     'connections' => [
 
         'sync' => [
-            'driver' => 'sync',
+            'Driver' => 'sync',
         ],
 
         'database' => [
-            'driver' => 'database',
+            'Driver' => 'database',
             'table' => 'jobs',
             'queue' => 'default',
             'retry_after' => 90,
         ],
 
         'beanstalkd' => [
-            'driver' => 'beanstalkd',
+            'Driver' => 'beanstalkd',
             'host' => 'localhost',
             'queue' => 'default',
             'retry_after' => 90,
         ],
 
         'sqs' => [
-            'driver' => 'sqs',
+            'Driver' => 'sqs',
             'key' => 'your-public-key',
             'secret' => 'your-secret-key',
             'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
@@ -58,7 +58,7 @@ return [
         ],
 
         'redis' => [
-            'driver' => 'redis',
+            'Driver' => 'redis',
             'connection' => 'default',
             'queue' => 'default',
             'retry_after' => 90,

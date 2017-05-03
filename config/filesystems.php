@@ -21,7 +21,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Many applications store files both locally and in the cloud. For this
-    | reason, you may specify a default "cloud" driver here. This driver
+    | reason, you may specify a default "cloud" Driver here. This Driver
     | will be bound as the Cloud disk implementation in the container.
     |
     */
@@ -34,8 +34,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may configure as many filesystem "disks" as you wish, and you
-    | may even configure multiple disks of the same driver. Defaults have
-    | been setup for each driver as an example of the required options.
+    | may even configure multiple disks of the same Driver. Defaults have
+    | been setup for each Driver as an example of the required options.
     |
     | Supported Drivers: "local", "ftp", "s3", "rackspace"
     |
@@ -44,19 +44,19 @@ return [
     'disks' => [
 
         'local' => [
-            'driver' => 'local',
+            'Driver' => 'local',
             'root' => storage_path('app'),
         ],
 
         'public' => [
-            'driver' => 'local',
+            'Driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
 
         's3' => [
-            'driver' => 's3',
+            'Driver' => 's3',
             'key' => env('AWS_KEY'),
             'secret' => env('AWS_SECRET'),
             'region' => env('AWS_REGION'),

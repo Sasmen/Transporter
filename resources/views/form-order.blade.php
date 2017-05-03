@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group {{ $errors->has('driver') ? ' has-error' : '' }}">
+                                <div class="form-group {{ $errors->has('Driver') ? ' has-error' : '' }}">
                                     <div class="col-md-4 control-label">
                                         {!! Form::label('driver_id', 'Kierowca:') !!}
                                     </div>
@@ -54,6 +54,35 @@
                                         {!! Form::select('driver_id', $drivers, null, ['class' => 'form-control selectpicker']) !!}
                                         @if ($errors->has('driver_id'))
                                             <span class="help-block"><strong>{{ $errors->first('driver_id') }}</strong></span>
+                                        @endif
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group {{ $errors->has('capacity') ? ' has-error' : '' }}">
+                                    <div class="col-md-4 control-label">
+                                        {!! Form::label('capacity', 'Pojemność:') !!}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            {!! Form::text('capacity', null, ['class' => 'form-control']) !!}
+                                            <span class="input-group-addon">m3</span></div>
+                                        @if ($errors->has('capacity'))
+                                            <span class="help-block"><strong>{{ $errors->first('capacity') }}</strong></span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group {{ $errors->has('payload') ? ' has-error' : '' }}">
+                                    <div class="col-md-4 control-label">
+                                        {!! Form::label('payload', 'Ładowność:') !!}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            {!! Form::text('payload', null, ['class' => 'form-control']) !!}
+                                            <span class="input-group-addon">kg</span></div>
+                                        @if ($errors->has('payload'))
+                                            <span class="help-block"><strong>{{ $errors->first('payload') }}</strong></span>
                                         @endif
                                     </div>
                                 </div>

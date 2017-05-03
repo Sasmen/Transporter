@@ -26,7 +26,7 @@ return [
     |
     |
     | All database work in Laravel is done through the PHP PDO facilities
-    | so make sure you have the driver for your particular database of
+    | so make sure you have the Driver for your particular database of
     | choice installed on your machine before you begin development.
     |
     */
@@ -34,13 +34,13 @@ return [
     'connections' => [
 
         'sqlite' => [
-            'driver' => 'sqlite',
+            'Driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
         ],
 
         'mysql' => [
-            'driver' => 'mysql',
+            'Driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'transporter'),
@@ -55,7 +55,7 @@ return [
         ],
 
         'pgsql' => [
-            'driver' => 'pgsql',
+            'Driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'forge'),

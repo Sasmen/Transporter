@@ -14,7 +14,6 @@
 Auth::routes();
 Route::get('/', 'HomeController@index');
 
-
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 
     Route::get('/addDriver', 'DriverController@create')->name('addDriver');
@@ -22,15 +21,21 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::get('/listDriver', 'DriverController@show')->name('listDriver');
     Route::delete('/destroyDriver/{id}', 'DriverController@destroy')->name('destroyDriver');
 
-
     Route::get('/addVehicle', 'VehicleController@create')->name('addVehicle');
     Route::post('/saveVehicle', 'VehicleController@store');
     Route::get('/listVehicle', 'VehicleController@show')->name('listVehicle');
     Route::delete('/destroyVehicle/{id}', 'VehicleController@destroy')->name('destroyVehicle');
 
-
     Route::get('/addOrder', 'OrderController@create')->name('addOrder');
     Route::post('/saveOrder', 'OrderController@store');
+    Route::get('/listOrder', 'OrderController@show')->name('listOrder');
+    Route::delete('/destroyOrder/{id}', 'OrderController@destroy')->name('destroyOrder');
+    Route::post('/endOrder/{id}', 'OrderController@endOrder')->name('endOrder');
 
 });
 
+Route::group(['prefix' => 'driver', 'middleware' => ['role:driver']], function() {
+    Route::get('/listOrder', 'OrderDriverController@show')->name('listOrder');
+    Route::get('/endOrder', 'OrderDriverController@edit')->name('endOrder');
+
+});

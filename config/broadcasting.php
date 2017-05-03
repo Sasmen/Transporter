@@ -31,7 +31,7 @@ return [
     'connections' => [
 
         'pusher' => [
-            'driver' => 'pusher',
+            'Driver' => 'pusher',
             'key' => env('PUSHER_APP_KEY'),
             'secret' => env('PUSHER_APP_SECRET'),
             'app_id' => env('PUSHER_APP_ID'),
@@ -41,16 +41,16 @@ return [
         ],
 
         'redis' => [
-            'driver' => 'redis',
+            'Driver' => 'redis',
             'connection' => 'default',
         ],
 
         'log' => [
-            'driver' => 'log',
+            'Driver' => 'log',
         ],
 
         'null' => [
-            'driver' => 'null',
+            'Driver' => 'null',
         ],
 
     ],

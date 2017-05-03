@@ -24,11 +24,11 @@ class DriverController extends Controller
         }
 
         //$drivers = Driver::all()->paginate(2);
-        return view('list-driver', ['drivers' => $drivers]);
+        return view('list-Driver', ['drivers' => $drivers]);
     }
 
     public function create() {
-        return view('form-driver');
+        return view('form-Driver');
     }
 
     public function store(Request $request) {

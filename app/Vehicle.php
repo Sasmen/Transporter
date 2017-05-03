@@ -11,7 +11,8 @@ class Vehicle extends Model
         'capacity',
         'payload',
         'registration',
-        'combustion'
+        'combustion',
+        'available'
     ];
 
     public function order() {

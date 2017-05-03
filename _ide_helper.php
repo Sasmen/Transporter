@@ -1172,7 +1172,7 @@ namespace {
     class Auth extends \Illuminate\Support\Facades\Auth{
 
         /**
-         * Create an instance of the database driver.
+         * Create an instance of the database Driver.
          *
          * @return \Illuminate\Auth\Guard
          * @static
@@ -1182,7 +1182,7 @@ namespace {
         }
 
         /**
-         * Create an instance of the Eloquent driver.
+         * Create an instance of the Eloquent Driver.
          *
          * @return \Illuminate\Auth\Guard
          * @static
@@ -1192,7 +1192,7 @@ namespace {
         }
 
         /**
-         * Get the default authentication driver name.
+         * Get the default authentication Driver name.
          *
          * @return string
          * @static
@@ -1202,7 +1202,7 @@ namespace {
         }
 
         /**
-         * Set the default authentication driver name.
+         * Set the default authentication Driver name.
          *
          * @param string $name
          * @return void
@@ -1213,7 +1213,7 @@ namespace {
         }
 
         /**
-         * Get a driver instance.
+         * Get a Driver instance.
          *
          * @param string $driver
          * @return mixed
@@ -1225,7 +1225,7 @@ namespace {
         }
 
         /**
-         * Register a custom driver creator Closure.
+         * Register a custom Driver creator Closure.
          *
          * @param string $driver
          * @param \Closure $callback
@@ -1923,7 +1923,7 @@ namespace {
         }
 
         /**
-         * Get a cache driver instance.
+         * Get a cache Driver instance.
          *
          * @param string $driver
          * @return mixed
@@ -1945,7 +1945,7 @@ namespace {
         }
 
         /**
-         * Get the default cache driver name.
+         * Get the default cache Driver name.
          *
          * @return string
          * @static
@@ -1955,7 +1955,7 @@ namespace {
         }
 
         /**
-         * Set the default cache driver name.
+         * Set the default cache Driver name.
          *
          * @param string $name
          * @return void
@@ -1966,7 +1966,7 @@ namespace {
         }
 
         /**
-         * Register a custom driver creator Closure.
+         * Register a custom Driver creator Closure.
          *
          * @param string $driver
          * @param \Closure $callback
@@ -3109,7 +3109,7 @@ namespace {
         }
 
         /**
-         * Get the PDO driver name.
+         * Get the PDO Driver name.
          *
          * @return string
          * @static
@@ -7666,7 +7666,7 @@ namespace {
         }
 
         /**
-         * Determine if the driver is connected.
+         * Determine if the Driver is connected.
          *
          * @param string $name
          * @return bool
@@ -10562,7 +10562,7 @@ namespace {
         }
 
         /**
-         * Get the default session driver name.
+         * Get the default session Driver name.
          *
          * @return string
          * @static
@@ -10572,7 +10572,7 @@ namespace {
         }
 
         /**
-         * Set the default session driver name.
+         * Set the default session Driver name.
          *
          * @param string $name
          * @return void
@@ -10583,7 +10583,7 @@ namespace {
         }
 
         /**
-         * Get a driver instance.
+         * Get a Driver instance.
          *
          * @param string $driver
          * @return mixed
@@ -10595,7 +10595,7 @@ namespace {
         }
 
         /**
-         * Register a custom driver creator Closure.
+         * Register a custom Driver creator Closure.
          *
          * @param string $driver
          * @param \Closure $callback
@@ -11131,7 +11131,7 @@ namespace {
         }
 
         /**
-         * Create an instance of the local driver.
+         * Create an instance of the local Driver.
          *
          * @param array $config
          * @return \Illuminate\Contracts\Filesystem\Filesystem
@@ -11142,7 +11142,7 @@ namespace {
         }
 
         /**
-         * Create an instance of the ftp driver.
+         * Create an instance of the ftp Driver.
          *
          * @param array $config
          * @return \Illuminate\Contracts\Filesystem\Filesystem
@@ -11153,7 +11153,7 @@ namespace {
         }
 
         /**
-         * Create an instance of the Amazon S3 driver.
+         * Create an instance of the Amazon S3 Driver.
          *
          * @param array $config
          * @return \Illuminate\Contracts\Filesystem\Cloud
@@ -11164,7 +11164,7 @@ namespace {
         }
 
         /**
-         * Create an instance of the Rackspace driver.
+         * Create an instance of the Rackspace Driver.
          *
          * @param array $config
          * @return \Illuminate\Contracts\Filesystem\Cloud
@@ -11175,7 +11175,7 @@ namespace {
         }
 
         /**
-         * Get the default driver name.
+         * Get the default Driver name.
          *
          * @return string
          * @static
@@ -11185,7 +11185,7 @@ namespace {
         }
 
         /**
-         * Register a custom driver creator Closure.
+         * Register a custom Driver creator Closure.
          *
          * @param string $driver
          * @param \Closure $callback

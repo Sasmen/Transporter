@@ -36,18 +36,13 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('adminadmin'),
         ]);
 
-
-        DB::table('roles')->insert([
-            'name' => 'admin',
-        ]);
-
-        DB::table('roles')->insert([
-            'name' => 'driver',
-        ]);
-
-
         $magda = App\User::where('name', '=', 'admin')->first();
         $role =  App\Role::where('name', '=', 'admin')->first();
         $magda->attachRole($role);
+
+
+        $monia = App\User::where('name', '=', 'monia')->first();
+        $role =  App\Role::where('name', '=', 'driver')->first();
+        $monia->attachRole($role);
     }
 }

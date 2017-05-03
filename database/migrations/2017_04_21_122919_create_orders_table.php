@@ -19,6 +19,9 @@ class CreateOrdersTable extends Migration
             $table->decimal('price',8,2);
             $table->date('date_start');
             $table->date('date_end')->nullable();
+            $table->integer('capacity');
+            $table->string('payload');
+            $table->float('combustion');
             $table->integer('driver_id')->unsigned();
             $table->foreign('driver_id')->references('id')->on('drivers')->onDelete('cascade');
             $table->integer('vehicle_id')->unsigned()->nullable();

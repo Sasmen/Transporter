@@ -20,6 +20,7 @@ class CreateVehiclesTable extends Migration
             $table->string('payload');
             $table->string('registration');
             $table->float('combustion');
+            $table->boolean('available')->default(true);
             $table->timestamps();
         });
     }

@@ -7,8 +7,8 @@ return [
     | Default Session Driver
     |--------------------------------------------------------------------------
     |
-    | This option controls the default session "driver" that will be used on
-    | requests. By default, we will use the lightweight native driver but
+    | This option controls the default session "Driver" that will be used on
+    | requests. By default, we will use the lightweight native Driver but
     | you may specify any of the other wonderful drivers provided here.
     |
     | Supported: "file", "cookie", "database", "apc",
@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'file'),
+    'Driver' => env('SESSION_DRIVER', 'file'),
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     | Session File Location
     |--------------------------------------------------------------------------
     |
-    | When using the native session driver, we need a location where session
+    | When using the native session Driver, we need a location where session
     | files may be stored. A default has been set for you but a different
     | location may be specified. This is only needed for file sessions.
     |
@@ -77,7 +77,7 @@ return [
     | Session Database Table
     |--------------------------------------------------------------------------
     |
-    | When using the "database" session driver, you may specify the table we
+    | When using the "database" session Driver, you may specify the table we
     | should use to manage the sessions. Of course, a sensible default is
     | provided for you; however, you are free to change this as needed.
     |
@@ -118,7 +118,7 @@ return [
     |
     | Here you may change the name of the cookie used to identify a session
     | instance by ID. The name specified here will get used every time a
-    | new session cookie is created by the framework for every driver.
+    | new session cookie is created by the framework for every Driver.
     |
     */
 
