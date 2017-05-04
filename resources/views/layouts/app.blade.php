@@ -55,10 +55,9 @@
                     @endif
                 </ul>
 
-
                 <ul class="nav navbar-nav">&nbsp;
                     @if (Auth::user() && Auth::user()->hasRole('driver'))
-                        <li><a href="{{ route('listOrder') }}">Zlecenia</a></li>
+                        <li><a href="{{ route('listOrderDriver') }}">Zlecenia</a></li>
                     @endif
                 </ul>
 

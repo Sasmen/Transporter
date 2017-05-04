@@ -35,7 +35,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 });
 
 Route::group(['prefix' => 'driver', 'middleware' => ['role:driver']], function() {
-    Route::get('/listOrder', 'OrderDriverController@show')->name('listOrder');
-    Route::get('/endOrder', 'OrderDriverController@edit')->name('endOrder');
+    Route::get('/listOrderDriver', 'OrderDriverController@show')->name('listOrderDriver');
+    Route::get('/endOrder/{id}', 'OrderDriverController@edit')->name('endOrder');
+    Route::post('/updateOrder', 'OrderDriverController@update')->name('updateOrder');
+
 
 });

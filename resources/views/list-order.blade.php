@@ -30,7 +30,6 @@
                     <td>{{$order->payload}}</td>
                     <td>{{$order->date_end}}</td>
                     <td>
-
                         {!! Form::model($order,['method' => 'POST', 'action' => ['OrderController@endOrder', $order->id]]) !!}
                         {!! Form::submit('Zakończ', ['class' => 'btn btn-success']) !!}
                         {!! Form::close() !!}

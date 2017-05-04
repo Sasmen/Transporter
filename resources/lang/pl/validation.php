@@ -127,7 +127,8 @@ return [
         'registration' => 'numer rejestracyjny',
         'combustion' => 'spalanie',
         'price' => 'cena',
-        'date_start' => 'data rozpoczęcia'
+        'date_start' => 'data rozpoczęcia',
+        'date_end' => 'data zakończenia'
     ],
 
 ];

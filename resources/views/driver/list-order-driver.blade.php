@@ -13,7 +13,8 @@
                 <th class="text-center">Pojemność pojazdu</th>
                 <th class="text-center">Ładowność pojazdu</th>
                 <th class="text-center">Data zakończnia</th>
-                <td class="text-center">Opcje</td>
+                <th class="text-center">Spalanie</th>
+                <th class="text-center">Opcje</th>
             </tr>
             @foreach($orders as $order)
                 <tr>
@@ -24,10 +25,14 @@
                     <td>{{$order->capacity}}</td>
                     <td>{{$order->payload}}</td>
                     <td>{{$order->date_end}}</td>
+                    <td>{{$order->combustion}}</td>
+
                     <td>
-                        {!! Form::model($order,['method' => 'POST', 'action' => ['OrderDriverController@edit', $order->id]]) !!}
-                        {!! Form::submit('Dodaj spalanie', ['class' => 'btn btn-danger']) !!}
-                        {!! Form::close() !!}
+                        @if(! $order->date_end)
+                            {!! Form::model($order,['method' => 'GET', 'action' => ['OrderDriverController@edit', $order->id]]) !!}
+                            {!! Form::submit('Zakończ', ['class' => 'btn btn-danger']) !!}
+                            {!! Form::close() !!}
+                        @endif
                     </td>
                 </tr>
             @endforeach

@@ -48,10 +48,20 @@ class OrderDriverController extends Controller
     public function edit($id)
     {
         $order = Order::findOrFail($id);
-        return view('form-end-order', ['order' => $order]);
+        return view('driver.form-end-order', ['order' => $order]);
     }
 
-    public function update($id) {
+    public function update(Request $request) {
 
+        $this->validate($request, [
+           'combustion' => 'required|numeric|between:5,30',
+            'date_end' => 'required|before:tomorrow'
+        ]);
+
+        $input = Req::all();
+        DB::table('orders')->where('id', '=', $input['id'])->update(['combustion' => $input['combustion'],
+            'date_end' => $input['date_end']]);
+
+        return redirect('driver/listOrderDriver');
     }
 }
