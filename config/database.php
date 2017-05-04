@@ -66,7 +66,6 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
-
     ],
 
     /*
@@ -105,5 +104,4 @@ return [
         ],
 
     ],
-
 ];
